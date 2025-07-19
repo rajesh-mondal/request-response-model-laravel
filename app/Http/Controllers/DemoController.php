@@ -13,4 +13,10 @@ class DemoController extends Controller {
         $age = $request->age;
         return "My name is $name and my age is $age";
     }
+
+    function requestJson( Request $request ): string {
+        $name = $request->input( 'name' );
+        $age = $request->input( 'age' );
+        return "My name is $name and my age is $age";
+    }
 }
