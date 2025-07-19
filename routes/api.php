@@ -8,3 +8,4 @@ use App\Http\Controllers\DemoController;
 //     return $request->user();
 // } )->middleware( 'auth:sanctum' );
 Route::get( '/hello', [DemoController::class, 'DemoAction'] );
+Route::get( '/hello/{name}/{age}', [DemoController::class, 'requestParameter'] );
