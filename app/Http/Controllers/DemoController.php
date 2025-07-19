@@ -19,4 +19,10 @@ class DemoController extends Controller {
         $age = $request->input( 'age' );
         return "My name is $name and my age is $age";
     }
+
+    function requestHeader( Request $request ): string {
+        $name = $request->header('name');
+        $age = $request->header('age');
+        return "My name is $name and my age is $age";
+    }
 }
