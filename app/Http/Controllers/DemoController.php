@@ -21,8 +21,24 @@ class DemoController extends Controller {
     }
 
     function requestHeader( Request $request ): string {
-        $name = $request->header('name');
-        $age = $request->header('age');
+        $name = $request->header( 'name' );
+        $age = $request->header( 'age' );
         return "My name is $name and my age is $age";
+    }
+
+    function requestHeaderBodyParam( Request $request ): array {
+        $pin = $request->header( 'pin' );
+        $city = $request->input( 'city' );
+        $postcode = $request->input( 'postcode' );
+        $name = $request->name;
+        $age = $request->age;
+
+        return array(
+            "pin"      => $pin,
+            "city"     => $city,
+            "postcode" => $postcode,
+            "name"     => $name,
+            "age"      => $age,
+        );
     }
 }
