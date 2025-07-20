@@ -15,3 +15,4 @@ Route::post( '/form-data', [DemoController::class, 'formData'] );
 Route::post( '/file-upload', [DemoController::class, 'fileUpload'] );
 Route::post( '/ip-address', [DemoController::class, 'ipAddress'] );
 Route::post( '/acc-content', [DemoController::class, 'accContentType'] );
+Route::post( '/cookie', [DemoController::class, 'cookie'] );

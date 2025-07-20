@@ -84,4 +84,10 @@ class DemoController extends Controller {
         }
     }
 
+    function cookie( Request $request ): string {
+        return $request->cookie( 'Cookie_1' );
+        // Retrieve all request cookies
+        // return $request->cookie();
+    }
+
 }
