@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
+use Illuminate\Support\Facades\Route;
 
 // Route::get( '/user', function ( Request $request ) {
 //     return $request->user();
@@ -12,3 +11,4 @@ Route::get( '/hello/{name}/{age}', [DemoController::class, 'requestParameter'] )
 Route::get( '/hello/{name}/{age}', [DemoController::class, 'requestHeaderBodyParam'] );
 Route::get( '/json-body', [DemoController::class, 'requestJson'] );
 Route::get( '/req-header', [DemoController::class, 'requestHeader'] );
+Route::post( '/form-data', [DemoController::class, 'formData'] );

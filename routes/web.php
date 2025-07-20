@@ -8,3 +8,4 @@ Route::get( '/hello/{name}/{age}', [DemoController::class, 'requestParameter'] )
 Route::get( '/hello/{name}/{age}', [DemoController::class, 'requestHeaderBodyParam'] );
 Route::get( '/json-body', [DemoController::class, 'requestJson'] );
 Route::get( '/req-header', [DemoController::class, 'requestHeader'] );
+Route::post( '/form-data', [DemoController::class, 'formData'] );
