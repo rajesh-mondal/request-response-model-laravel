@@ -64,10 +64,24 @@ class DemoController extends Controller {
 
         // Uploads the file to the "storage/app/upload" directory (non-public/private storage)
         $photoFile->storeAs( 'upload', $photoFile->getClientOriginalName() );
-        
+
         // Moves the file to the "public/upload" directory, making it accessible via the web
         $photoFile->move( public_path( 'upload' ), $photoFile->getClientOriginalName() );
 
         return true;
     }
+
+    function ipAddress( Request $request ): string {
+        return $request->ip();
+
+    }
+
+    function accContentType( Request $request ): bool {
+        if ( $request->accepts( ['text/html'] ) ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

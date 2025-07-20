@@ -10,3 +10,5 @@ Route::get( '/json-body', [DemoController::class, 'requestJson'] );
 Route::get( '/req-header', [DemoController::class, 'requestHeader'] );
 Route::post( '/form-data', [DemoController::class, 'formData'] );
 Route::post( '/file-upload', [DemoController::class, 'fileUpload'] );
+Route::post( '/ip-address', [DemoController::class, 'ipAddress'] );
+Route::post( '/acc-content', [DemoController::class, 'accContentType'] );
