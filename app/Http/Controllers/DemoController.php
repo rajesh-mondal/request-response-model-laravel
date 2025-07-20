@@ -58,4 +58,16 @@ class DemoController extends Controller {
             "fileExtension"    => $fileExtension,
         );
     }
+
+    function fileUpload( Request $request ): bool {
+        $photoFile = $request->file( 'photo' );
+
+        // Uploads the file to the "storage/app/upload" directory (non-public/private storage)
+        $photoFile->storeAs( 'upload', $photoFile->getClientOriginalName() );
+        
+        // Moves the file to the "public/upload" directory, making it accessible via the web
+        $photoFile->move( public_path( 'upload' ), $photoFile->getClientOriginalName() );
+
+        return true;
+    }
 }

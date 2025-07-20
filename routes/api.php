@@ -12,3 +12,4 @@ Route::get( '/hello/{name}/{age}', [DemoController::class, 'requestHeaderBodyPar
 Route::get( '/json-body', [DemoController::class, 'requestJson'] );
 Route::get( '/req-header', [DemoController::class, 'requestHeader'] );
 Route::post( '/form-data', [DemoController::class, 'formData'] );
+Route::post( '/file-upload', [DemoController::class, 'fileUpload'] );
