@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ResponseController;
+use Illuminate\Support\Facades\Route;
 
 // Route::get( '/user', function ( Request $request ) {
 //     return $request->user();
@@ -24,7 +24,10 @@ Route::post( '/json-response', [ResponseController::class, 'jsonResponse'] );
 Route::get( '/redirect-response1', [ResponseController::class, 'redirectResponse1'] );
 Route::get( '/redirect-response2', [ResponseController::class, 'redirectResponse2'] );
 
-Route::get("/file-binary", [ResponseController::class,"fileBinary"] );
-Route::get("/file-download", [ResponseController::class,"fileDownload"] );
+Route::get( "/file-binary", [ResponseController::class, "fileBinary"] );
+Route::get( "/file-download", [ResponseController::class, "fileDownload"] );
 
-Route::get( "/cookie-response", [ResponseController::class,"cookieResponse"] );
+Route::get( "/cookie-response", [ResponseController::class, "cookieResponse"] );
+
+Route::get( "/response-header", [ResponseController::class, "responseHeader"] );
+Route::get( "/response-view", [ResponseController::class, "responseView"] );

@@ -68,4 +68,12 @@ class ResponseController extends Controller {
         return response( "Hi!" )->cookie( $name, $value, $minutes, $path, $domain, $secure, $httpOnly );
     }
 
+    function responseHeader() {
+        return response( "Hello!" )->header( 'key1', 'value1' );
+    }
+
+    function responseView() {
+        return view( 'page.home' );
+    }
+
 }
