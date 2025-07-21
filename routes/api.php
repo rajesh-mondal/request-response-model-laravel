@@ -19,3 +19,4 @@ Route::post( '/acc-content', [DemoController::class, 'accContentType'] );
 Route::post( '/cookie', [DemoController::class, 'cookie'] );
 
 Route::post( '/response-format', [ResponseController::class, 'responseFormat'] );
+Route::post( '/json-response', [ResponseController::class, 'jsonResponse'] );

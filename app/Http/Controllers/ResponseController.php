@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class ResponseController extends Controller
-{
-         function responseFormat( Request $request ): array | int | string | null | bool {
+class ResponseController extends Controller {
+    function responseFormat( Request $request ): array | int | string | null | bool {
         /*
         // Return a string response
         return "This is a string";
@@ -29,5 +29,12 @@ class ResponseController extends Controller
             'name' => 'John',
             'age' => 22
         );
-     }
+    }
+
+    function jsonResponse( Request $request ): JsonResponse {
+        $code = 201;
+        $content = array( 'name' => 'Jack', 'city' => 'London' );
+        return response()->json( $content, $code );
+    }
+
 }
