@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\DemoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
+use App\Http\Controllers\ResponseController;
 
 // Route::get( '/user', function ( Request $request ) {
 //     return $request->user();
@@ -16,3 +17,5 @@ Route::post( '/file-upload', [DemoController::class, 'fileUpload'] );
 Route::post( '/ip-address', [DemoController::class, 'ipAddress'] );
 Route::post( '/acc-content', [DemoController::class, 'accContentType'] );
 Route::post( '/cookie', [DemoController::class, 'cookie'] );
+
+Route::post( '/response-format', [ResponseController::class, 'responseFormat'] );
