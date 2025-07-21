@@ -26,3 +26,5 @@ Route::get( '/redirect-response2', [ResponseController::class, 'redirectResponse
 
 Route::get("/file-binary", [ResponseController::class,"fileBinary"] );
 Route::get("/file-download", [ResponseController::class,"fileDownload"] );
+
+Route::get( "/cookie-response", [ResponseController::class,"cookieResponse"] );
