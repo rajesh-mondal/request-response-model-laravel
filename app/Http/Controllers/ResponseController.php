@@ -46,4 +46,14 @@ class ResponseController extends Controller {
         return "Hello 2";
     }
 
+    function fileBinary() {
+        $filePath = "upload/default.jpg";
+        return response()->file( $filePath );
+    }
+
+    function fileDownload() {
+        $filePath = "upload/default.jpg";
+        return response()->download( $filePath );
+    }
+
 }

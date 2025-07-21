@@ -23,3 +23,6 @@ Route::post( '/json-response', [ResponseController::class, 'jsonResponse'] );
 
 Route::get( '/redirect-response1', [ResponseController::class, 'redirectResponse1'] );
 Route::get( '/redirect-response2', [ResponseController::class, 'redirectResponse2'] );
+
+Route::get("/file-binary", [ResponseController::class,"fileBinary"] );
+Route::get("/file-download", [ResponseController::class,"fileDownload"] );
