@@ -20,3 +20,6 @@ Route::post( '/cookie', [DemoController::class, 'cookie'] );
 
 Route::post( '/response-format', [ResponseController::class, 'responseFormat'] );
 Route::post( '/json-response', [ResponseController::class, 'jsonResponse'] );
+
+Route::get( '/redirect-response1', [ResponseController::class, 'redirectResponse1'] );
+Route::get( '/redirect-response2', [ResponseController::class, 'redirectResponse2'] );

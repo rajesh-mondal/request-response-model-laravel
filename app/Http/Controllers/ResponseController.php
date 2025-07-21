@@ -37,4 +37,13 @@ class ResponseController extends Controller {
         return response()->json( $content, $code );
     }
 
+    function redirectResponse1(): string {
+        return redirect( "/redirect-response2" );
+    }
+
+    function redirectResponse2(): string {
+        // return redirect( "/redirect-response1" );
+        return "Hello 2";
+    }
+
 }
